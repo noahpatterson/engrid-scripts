@@ -1,4 +1,33 @@
 [data-engrid-theme] {
+  // In the event a Digital Wallets widget is added to a page that it shouldn't be, force it's visiblity in Page Builder and display a warning.
+  &#en__pagebuilder,
+  &[data-engrid-debug] {
+    #en__digitalWallet[style*="none"] {
+      // background-color: #66339914;
+      background-color: #ff00001a;
+      display: block !important;
+      // outline: 1px dashed rebeccapurple;
+      outline: 5px dashed red;
+      min-height: 206px;
+      &:before {
+        align-items: center;
+        color: #999;
+        content: "NOTICE if on a Premium Page \A Consider deleting this Digital Wallets Widget \A It's presence could cause problems";
+        display: flex;
+        flex-basis: 100%;
+        font-size: 1rem;
+        font-weight: 700;
+        height: calc(100% - 8px);
+        justify-content: center;
+        position: absolute;
+        text-align: center;
+        top: 8px;
+        width: 100%;
+        white-space: pre-wrap;
+      }
+    }
+  }
+
   #en__digitalWallet,
   .en__digitalWallet__container {
     max-width: 100% !important;

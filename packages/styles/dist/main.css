@@ -4300,6 +4300,28 @@ body:not(#en__pagebuilder):not([data-engrid-debug]) .i11-hide-label .en__field:n
 [data-engrid-theme] {
   /* prettier-ignore */
 }
+[data-engrid-theme]#en__pagebuilder #en__digitalWallet[style*=none], [data-engrid-theme][data-engrid-debug] #en__digitalWallet[style*=none] {
+  background-color: rgba(255, 0, 0, 0.1019607843);
+  display: block !important;
+  outline: 5px dashed red;
+  min-height: 206px;
+}
+[data-engrid-theme]#en__pagebuilder #en__digitalWallet[style*=none]:before, [data-engrid-theme][data-engrid-debug] #en__digitalWallet[style*=none]:before {
+  align-items: center;
+  color: #999;
+  content: "NOTICE if on a Premium Page \a Consider deleting this Digital Wallets Widget \aIt's presence could cause problems";
+  display: flex;
+  flex-basis: 100%;
+  font-size: 1rem;
+  font-weight: 700;
+  height: calc(100% - 8px);
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  top: 8px;
+  width: 100%;
+  white-space: pre-wrap;
+}
 [data-engrid-theme] #en__digitalWallet,
 [data-engrid-theme] .en__digitalWallet__container {
   max-width: 100% !important;
